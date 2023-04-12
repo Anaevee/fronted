@@ -1,0 +1,24 @@
+.contenedorPadre {
+  display: flex;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorLogin {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contenedorRegistro {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,95 @@
+<!-- <div class="contenedorPadre">
+  <div class="container">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput type="password" name="password" />
+      <button mat-icon-button></button>
+      <div class="textcontent">
+        <form [formGroup]="inicioSesion" (ngSubmit)="guardarUsuario()">
+          <label class="formulario">Usuario </label>
+          <input type="text" formControlName="name" required />
+          <button>LOG IN</button>
+        </form>
+      </div>
+      <div class="login">
+        <h2>Registro</h2>
+        <input type="text" name="email" placeholder="  EMAIL" />
+        <input type="password" name="password" placeholder="  PASSWORD" />
+        <input type="text" name="usuario" placeholder="  FULLNAME" />
+        <input type="text" name="name" placeholder="  name" />
+      </div>
+    </mat-form-field>
+  </div>
+</div> -->
+
+<!-- <div class="ContenedorPadre">
+  <div class="login">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput type="password" name="password" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your usuario</mat-label>
+      <input matInput type="text" formControlName="name" required />
+    </mat-form-field>
+    <form [formGroup]="inicioSesion" (ngSubmit)="guardarUsuario()">
+      <button>LOG IN</button>
+    </form>
+  </div>
+</div> -->
+<div class="contenedorPadre">
+  <form class="contenedorLogin">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="Enter your name" name="usename" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        placeholder="Enter your password"
+        name="password"
+        type="password"
+      />
+    </mat-form-field>
+    <form [formGroup]="inicioSesion" (ngSubmit)="guardarUsuario()">
+      <button>LOG IN</button>
+    </form>
+  </form>
+  <!-- ------------------------------------------------------------------------ -->
+  <form
+    [formGroup]="registro"
+    (ngSubmit)="guardarUsuarioRegistro()"
+    class="contenedorRegistro"
+  >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>User Name</mat-label>
+      <input
+        formControlName="name"
+        matInput
+        placeholder="Enter your name"
+        name="usename"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        formControlName="password"
+        matInput
+        placeholder="Enter your password"
+        name="password"
+        type="password"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        formControlName="email"
+        matInput
+        placeholder="Enter your email"
+        name="email"
+      />
+    </mat-form-field>
+    <button type="submit">Registro</button>
+  </form>
+</div>
