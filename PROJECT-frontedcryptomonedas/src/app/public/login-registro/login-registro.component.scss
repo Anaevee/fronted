@@ -6,13 +6,17 @@
   align-items: center;
   justify-content: center;
 }
-
 .contenedorLogin {
   display: flex;
   width: 33%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 1px solid #ec0606;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 5%;
 }
 
 .contenedorRegistro {
@@ -21,4 +25,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 1px solid #ec0606;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 5%;
 }
