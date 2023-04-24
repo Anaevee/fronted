@@ -11,3 +11,63 @@ td,
 th {
   width: 25%;
 }
+
+.datosTabla {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-elevation-z8 {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+::ng-deep .mat-form-field {
+  display: flex;
+  text-align: left;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  font-size: 14px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .mat-paginator,
+.mat-paginator-page-size .mat-select-trigger {
+  color: red;
+}
+
+::ng-deep .mat-paginator[_ngcontent-khu-c140],
+.mat-paginator-page-size[_ngcontent-khu-c140]
+  .mat-select-trigger[_ngcontent-khu-c140] {
+  color: red;
+}
+
+::ng-deep .mat-paginator-icon {
+  color: red;
+}
+
+.botones {
+  color: red;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-select-value {
+  color: red;
+}
+
+::ng-deep .mat-select-arrow {
+  color: red;
+}
+
+.filter {
+  margin-left: 43%;
+}

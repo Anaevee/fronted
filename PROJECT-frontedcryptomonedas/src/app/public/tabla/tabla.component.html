@@ -1,12 +1,8 @@
-<div DatosTabla>
-  <mat-form-field appearance="standard">
+<app-header></app-header>
+<div DatosTabla class="datosTabla">
+  <mat-form-field appearance="standard" class="filter">
     <mat-label>Filter</mat-label>
-    <input
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Ex. Mia"
-      #input
-    />
+    <input matInput (keyup)="applyFilter($event)" placeholder="" #input />
   </mat-form-field>
 
   <div class="mat-elevation-z8">
@@ -29,14 +25,25 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>stock</th>
         <td mat-cell *matCellDef="let row">{{ row.stock }}</td>
       </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>actions</th>
+        <div class="botones">
+          <td mat-cell *matCellDef="let row">
+            <button class="botones" mat-stroked-button type="submit">
+              Comprar
+            </button>
+            <button class="botones" mat-stroked-button type="submit">
+              Vender
+            </button>
+          </td>
+        </div>
+      </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4"></td>
+        <td class="mat-cell" colspan="5"></td>
       </tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
 </div>
-
-<!-- <button (click)="getUsers()">soy el boton</button> -->

@@ -1,0 +1,39 @@
+.fotologo {
+  max-width: 80px;
+  height: auto;
+}
+
+.contenedorPrincipal {
+  display: flex;
+  width: 100%;
+  gap: 20rem;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  width: 33%;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Perfil {
+  display: flex;
+  width: 33%;
+  align-items: baseline;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.mat-paginator-icon {
+  color: red;
+}
+
+.compraVenta {
+  color: red;
+}
+
+.mat-form-field-wrapper {
+  width: 50%;
+}

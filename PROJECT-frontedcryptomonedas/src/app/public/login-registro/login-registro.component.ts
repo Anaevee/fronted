@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginRegistroComponent implements OnInit {
   inicioSesion: FormGroup = new FormGroup({
     name: new FormControl(''),
+    password: new FormControl(''),
   });
 
   registro = new FormGroup({
@@ -27,6 +28,8 @@ export class LoginRegistroComponent implements OnInit {
     ]),
     email: new FormControl('', [Validators.required, Validators.email]),
   });
+
+  public MatProgressSpinnerModule = false;
 
   constructor(private datosUsuarios: datosUsuarios, private router: Router) {}
 
@@ -46,5 +49,23 @@ export class LoginRegistroComponent implements OnInit {
     console.log(registro);
     this.datosUsuarios.guardarUsuario(registro);
   }
+
+  desloguearse() {
+    this.datosUsuarios.desloguarse();
+    this.router.navigate(['/']);
+  }
+
+  onsubmitLogin() {
+    const username = this.inicioSesion.value.name;
+    const password = this.inicioSesion.value.password;
+    this.datosUsuarios.login(username, password).subscribe((data) => {
+      this.datosUsuarios.guardarUsuario(data.token);
+      this.router.navigate(['/tabla']);
+    });
+  }
+  showspinner() {
+    this.MatProgressSpinnerModule = true;
+  }
+
   ngOnInit(): void {}
 }

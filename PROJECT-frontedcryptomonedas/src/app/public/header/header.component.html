@@ -1,0 +1,18 @@
+<div class="contenedorPrincipal">
+  <div class="logo">
+    <img src="assets/OIP.jpg" alt="" class="fotologo" />
+    <div>
+      <h1>Crypto Wallet</h1>
+    </div>
+  </div>
+  <div class="contenedorlogin">
+    <div class="Perfil">
+      <h1>{{ usuario.username }}</h1>
+      <h1>{{ usuario.deposit }}</h1>
+      <mat-icon>account_circle</mat-icon>
+      <button mat-mini-fab color="warn">
+        <mat-icon (click)="desloguearse()">exit_to_app</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

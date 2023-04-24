@@ -17,4 +17,17 @@ export class DatosTabla {
     this.asset = asset;
     this.stock = stock;
   }
+  // export class updateCrypto{
+  //   public crypto_id: string;
+  // public cryptoname: string;
+  // public amount : number;
+  // constructor(crypto_id: string,
+  //   cryptoname: string,
+  //   amount:number){
+  //     this.crypto_id = crypto_id;
+  //   this.cryptoname = cryptoname;
+  //   this.amount = amount;
+
+  //   }
+  // }
 }
